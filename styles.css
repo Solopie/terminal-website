@@ -1,0 +1,63 @@
+html,
+body {
+    background-color: rgb(51, 51, 51);
+    margin: 0px;
+    height: 95%;
+}
+
+#outer-frame {
+    width: 800;
+    background: rgb(26, 26, 26);
+    border-radius: 50% 50% 50% 50% / 10% 10% 10% 10%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    height: calc(100% - 80px);
+
+    display: flex;
+    justify-content: center;
+    box-shadow: inset 0 0 50px #2e2e2e;
+}
+
+#screen-border {
+    width: 700;
+    background: rgb(34, 34, 34);
+    border-radius: 40% 40% 40% 40% / 14% 14% 14% 14%;
+    margin: auto;
+    height: calc(100% - 80px);
+    box-shadow: inset 0 0 30px #000000;
+}
+
+#terminal-content-container {
+    color: rgb(255, 255, 255);
+    margin-left: 50px;
+    margin-top: 80px;
+}
+
+#terminal-content-list {
+    list-style: none;
+    font: 1rem Inconsolata, monospace;
+}
+
+.prompt {
+    color: rgb(53, 255, 46)
+}
+
+#terminal-input {
+    background: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    border: 0px;
+    outline: none;
+    font: 1rem Inconsolata, monospace;
+}
+
+@media only screen and (max-width: 860px) {
+    #outer-frame {
+        width: 80%;
+    }
+
+    #screen-border {
+        width: 80%;
+    }
+}
