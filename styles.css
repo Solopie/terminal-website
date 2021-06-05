@@ -54,10 +54,27 @@ body {
 
 @media only screen and (max-width: 860px) {
     #outer-frame {
-        width: 80%;
+        width: 100%;
+        background: rgb(26, 26, 26);
+        height: calc(100% - 80px);
+        margin: 0px;
     }
 
     #screen-border {
         width: 80%;
+        margin: auto;
+        height: calc(100% - 80px);
+        box-shadow: inset 0 0 30px #000000;
+    }
+
+    #terminal-content-container {
+        color: rgb(255, 255, 255);
+        margin-left: 0px;
+        margin-top: 80px;
+    }
+
+    #terminal-content-list {
+        list-style: none;
+        font: 20px Inconsolata, monospace;
     }
 }
