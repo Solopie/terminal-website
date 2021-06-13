@@ -5,6 +5,7 @@ import { fillTerminal } from "./views.js"
 let terminalHistory = ["Welcome to Solopie's Terminal!",
     "Run the \"help\" command to get some options!"]
 
+// Colour the prompt
 function colourPrompt() {
     const prompt = "solopie@website"
     // Change font colour of prompt 
@@ -19,6 +20,7 @@ function colourPrompt() {
     }
 }
 
+// Bind event listeners when terminal is re-rendered
 function binding() {
     // Handling terminal input
     const inputForm = $("#input-form")
@@ -27,8 +29,14 @@ function binding() {
         const terminalInput = $("#terminal-input")
         appendInput(terminalInput[0].value)
     })
+
+    $(window).click(() => {
+        const terminalInput = $("#terminal-input")
+        terminalInput.focus()
+    })
 }
 
+// Update terminal history with new terminal input
 function appendInput(terminalInput) {
     const prompt = "solopie@website"
     const fullPrompt = prompt + ":~$ "
